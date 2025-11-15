@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 695
+    size: 697
     values:
       - FBX
       - FBX/goose.fbx
@@ -25,6 +25,8 @@ CollapsedEntities:
       - Materials/PBR.mat
       - Meshes
       - PBR.mat
+      - Prefabs/Box.prefab
+      - Prefabs/EnemyPrefab.prefab
       - Render
       - Render/Render Target.renderTarget
       - Scenes
@@ -694,8 +696,8 @@ CollapsedEntities:
       - _Scripts/Test.ts
       - _Scripts/UIHandler.ts
       - _Scripts/enemy_scripts
-      - _Scripts/enemy_scripts/lerp.js
-      - _Scripts/enemy_scripts/spawner.js
+      - _Scripts/enemy_scripts/EnemySpawner.ts
+      - _Scripts/enemy_scripts/Lerp.ts
       - _Scripts/web-facing/Call_AI.js
       - _Scripts/web-facing/Refer_to_DB.js
   options: 4

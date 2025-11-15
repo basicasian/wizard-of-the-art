@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/388fd5cf-4d3c-4e40-a068-276f1c210a35>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> b379b9bb-465d-4258-b376-ba76d599afcd
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> b379b9bb-465d-4258-b376-ba76d599afcd
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 17868fba-19c0-4cda-9f57-986a96fb5efc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/17868fba-19c0-4cda-9f57-986a96fb5efc>
+  Prototype: !<ObjectOwner/46d357f7-bdc6-49ca-bc26-5da1e0fb1ca3>
+    PackagePath: ""
+    objects:
+      - !<own> d13d39a1-3cdd-4951-4e4d-801c47d7c4c4
+- !<SceneObject/d13d39a1-3cdd-4951-4e4d-801c47d7c4c4>
+  PrefabRemaps:
+    []
+  Name: Box
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -50.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> f0306a52-5f37-4441-5660-4740d1983fc3
+    - !<own> f800b2c9-cfaa-4f8c-6013-a0d177301f71
+- !<RenderMeshVisual/f0306a52-5f37-4441-5660-4740d1983fc3>
+  PrefabRemaps:
+    []
+  Name: Render Mesh Visual
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> d3ca0fec-24f4-47cf-a4b2-298061d1d511
+  Mesh: !<reference> e542623c-1432-4bfa-881d-a28905bd9e57
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ScriptComponent/f800b2c9-cfaa-4f8c-6013-a0d177301f71>
+  PrefabRemaps:
+    []
+  Name: SpellMovement
+  Enabled: true
+  ScriptAsset: !<reference> 41b0cc2e-e97c-46d3-9c72-4a6405e92f62
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      {}
+  ScriptTypes:
+    "":
+      {}

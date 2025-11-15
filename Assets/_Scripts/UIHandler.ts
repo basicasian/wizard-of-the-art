@@ -34,7 +34,7 @@ export class UIHandler extends BaseScriptComponent {
             print('Start fully triggered!');
 
             this.enemy.enabled = true;
-
+            
             let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
             spell.createComponent(SpellMovement.getTypeName());
             spell.getComponent(SpellMovement.getTypeName()).forwardVec =  this.mCamera.forward();

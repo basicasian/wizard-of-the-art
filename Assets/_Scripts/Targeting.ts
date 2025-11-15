@@ -33,14 +33,12 @@ export class PinchExample extends BaseScriptComponent {
           spell.createComponent(SpellMovement.getTypeName());
           spell.getComponent(SpellMovement.getTypeName()).forwardVec = this.mCamera.forward();
         }
-
       });
 
-
     this.gestureModule
-      .getGrabBeginEvent(GestureModule.HandType.Left)
-      .add((grabBeginArgs: GrabBeginArgs) => {
-        this.debugText.text = 'Left Hand Grab  Begin'
+      .getGrabEndEvent(GestureModule.HandType.Left)
+      .add((grabEndArgs: GrabEndArgs) => {
+        this.debugText.text = 'Left Hand Grab End'
         print('Left Hand Grab Begin');
 
         if (this.gestureGPTScript.IsDone()) {
@@ -50,5 +48,19 @@ export class PinchExample extends BaseScriptComponent {
         }
       });
 
+      this.gestureModule
+      .getIsPhoneInHandBeginEvent(GestureModule.HandType.Right)
+      .add((grabBeginArgs: GrabBeginArgs) => {
+        print('Right hand started to hold a phone.');
+
+        
+        if (this.gestureGPTScript.IsDone()) {
+          let spell = this.gestureGPTScript.getSpellObject("Wind", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
+          spell.createComponent(SpellMovement.getTypeName());
+          spell.getComponent(SpellMovement.getTypeName()).forwardVec = this.mCamera.forward();
+        }
+      });
+
+    
   }
 }

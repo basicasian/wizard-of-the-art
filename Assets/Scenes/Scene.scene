@@ -1022,7 +1022,7 @@
   PrefabRemaps:
     []
   Name: Enemy
-  Enabled: false
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -4112,7 +4112,7 @@
   MeshShadowMode: None
   ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
   ShadowDensity: 1.000000
-  Text: "Step into the whimsical world of Wizard of the Fart, where you play as a mischievous wizard battling dragons with elemental fart-powered spells—fire, water, wind, and more— in an epic, fart-filled adventure!"
+  Text: "Step into the whimsical world of Wizard of the Fart, where you play as a mischievous wizard battling dragons with elemental fart and evil AI generated spells—fire, water, wind, and more— in an epic, fart-filled adventure!"
   Editable: false
   ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
@@ -4365,7 +4365,9 @@
       {}
 - !<SceneObject/6464f74f-96c7-4318-ae6b-cabeaf0104a7>
   PrefabRemaps:
-    []
+    - 347d03b2-b333-458e-ae74-5f59a29fcd61: f800b2c9-cfaa-4f8c-6013-a0d177301f71
+    - 6464f74f-96c7-4318-ae6b-cabeaf0104a7: d13d39a1-3cdd-4951-4e4d-801c47d7c4c4
+    - 8bf71f64-b6e0-4d34-aeea-c262917ef21d: f0306a52-5f37-4441-5660-4740d1983fc3
   Name: Box
   Enabled: false
   Layers: 1
@@ -6438,6 +6440,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/921cb43c-8db1-4796-9135-0604850efb7e>
+  PrefabRemaps:
+    []
+  Name: EnemySpawner
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> b31038b2-cb39-40d6-8147-f6d6a63de8ce
 - !<ScriptComponent/92604ffe-50e9-40e5-85be-c2e345374041>
   PrefabRemaps:
     []
@@ -7225,6 +7242,7 @@
     - !<own> 102673da-c023-4ea5-907b-ddf5d02833a8
     - !<own> 6464f74f-96c7-4318-ae6b-cabeaf0104a7
     - !<own> b325b1e8-4bff-44b4-bb4c-0c316b24ba47
+    - !<own> 921cb43c-8db1-4796-9135-0604850efb7e
   Components:
     []
 - !<Text/a0ecffa6-e2f9-4612-85b9-56cf7d5a7d6c>
@@ -8240,9 +8258,28 @@
     - !<own> 88b656b3-7e38-4f5d-b871-6cc2043de439
   Components:
     - !<own> 21b6db4d-7b26-4e61-9be7-d9646dad40c8
-- !<SceneObject/b325b1e8-4bff-44b4-bb4c-0c316b24ba47>
+- !<ScriptComponent/b31038b2-cb39-40d6-8147-f6d6a63de8ce>
   PrefabRemaps:
     []
+  Name: EnemySpawner
+  Enabled: true
+  ScriptAsset: !<reference> e4a7d3c4-ba97-4212-a393-a9c7ee9063d1
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      spawnParent: !<reference.SceneObject> 921cb43c-8db1-4796-9135-0604850efb7e
+      enemyPrefab: !<reference.ObjectPrefab> b379b9bb-465d-4258-b376-ba76d599afcd
+  ScriptTypes:
+    "":
+      {}
+- !<SceneObject/b325b1e8-4bff-44b4-bb4c-0c316b24ba47>
+  PrefabRemaps:
+    - 18362226-6733-4830-9b37-7fffdda44436: 6e21a839-980b-4038-77ce-a0373c33fcd8
+    - 18e3af16-e969-4fc1-8a93-0b6a461eadd0: df3d5c59-400c-4767-516e-b61c62d1fda9
+    - b325b1e8-4bff-44b4-bb4c-0c316b24ba47: 07151509-950a-4999-711b-c839cbdbdba2
   Name: Enemy
   Enabled: true
   Layers: 1
