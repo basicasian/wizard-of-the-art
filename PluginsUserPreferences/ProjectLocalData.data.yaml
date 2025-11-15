@@ -1,7 +1,12 @@
 data:
   externalSources:
+    - 0e15340b-63fa-4938-afb4-9ab0ce8d3087: "C:/Users/Nana/Downloads/Logo-WotF-text-n-pic.png"
+    - 26965a74-78f3-4163-8ef8-50e91ec44fad: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/EmptyMaterial/Resources/empty.ss_graph"
+    - 4e05c255-4ada-41d9-8e48-41a0b4a9e196: "C:/Users/Nana/Downloads/Logo-WotF-notext.png"
     - 77deda47-389c-42cd-a321-eff1cf73db9f: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/Resources/Normal.png"
     - 8747e984-64a4-4406-ad29-e43c3bb99239: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/Resources/MaterialParams.png"
+    - 887e91f2-a5e0-44db-8d65-901d863453a9: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
+    - d32bf709-e206-4f09-be22-621c0132d8c2: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/SimplePBRMaterial/Resources/simple_pbr.ss_graph"
     - dedfa34f-e773-4434-8ecd-44227e4d7300: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/TypeScript/Resources/Untitled TypeScript.ts"
     - df6ab55c-1503-4d7a-b271-0d5d8860e8ec: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/Resources/Base.png"
     - e22692f3-c96a-4ae7-ab9a-d7213c596401: "C:/Program Files/Snap Inc/Lens Studio/JsPlugins/PresetsRegistry/Assets/PBRMaterial/Resources/pbr.ss_graph"

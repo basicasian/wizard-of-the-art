@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/0b927608-d5b5-492f-bb7f-0053c10eac56>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 6349c5c4-e0a0-4e38-90c8-a1f9b2032eec
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 6349c5c4-e0a0-4e38-90c8-a1f9b2032eec
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e7c29d7b-fcc0-422e-866c-07f96482db39
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e7c29d7b-fcc0-422e-866c-07f96482db39>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 737611b2-32d0-438d-9e6f-3585d9c36ee0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    enemy: false
+    gestureGPTScript: false
+    mainCam: false
+    spellModel: false
+    startButton: false
+    startText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - mainCam: !<reference.Camera> 00000000-0000-0000-0000-000000000000
+      startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      startText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      spellModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      gestureGPTScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      enemy: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Camera mainCam
+    - // @input AssignableType startButton
+    - // @input Component.Text startText
+    - // @input SceneObject spellModel
+    - // @input AssignableType_1 gestureGPTScript
+    - // @input SceneObject enemy

@@ -66,7 +66,7 @@ export class ExampleSnap3D extends BaseScriptComponent {
     this.avaliableToRequest = false;
     this.resetAssets();
     this.hintText.text = "Requested Snap3D generation. Please wait...";
-
+// hello from the other side
     this.enableSpinners(true);
 
     Snap3D.submitAndGetStatus({

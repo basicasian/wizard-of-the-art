@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 526
+    size: 695
     values:
       - FBX
       - FBX/goose.fbx
@@ -17,15 +17,20 @@ CollapsedEntities:
       - FBX/goose.fbx/Meshes/Plane1
       - FBX/goose.fbx/Meshes/Plane2
       - FBX/goose.fbx/goose
+      - Image 2.mat
+      - Image 3.mat
+      - Image.mat
+      - Internet Module.internetModule
       - Materials
       - Materials/PBR.mat
       - Meshes
+      - PBR.mat
       - Render
+      - Render/Render Target.renderTarget
       - Scenes
+      - Scenes/Scene.scene
       - Shaders
       - Shaders/pbr.ss_graph
-      - SpectaclesInteractionKit.lspkg
-      - SpectaclesInteractionKit.lspkg/Assets
       - SpectaclesInteractionKit.lspkg/Assets/Audio
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
       - SpectaclesInteractionKit.lspkg/Assets/Audio/TriggerEndAudioTrack.wav
@@ -84,7 +89,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Materials/SpritePreset.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/TargetOutlineMaterial.mat
       - SpectaclesInteractionKit.lspkg/Assets/Materials/Text3DDefault.mat
-      - SpectaclesInteractionKit.lspkg/Assets/Meshes
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/BoxMesh.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/ButtonCapsuleMesh.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/ButtonSphereMesh.mesh
@@ -94,9 +98,7 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/LeftHandMeshIndexThumb.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/LeftHandMeshPin.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlaneMesh.mesh
-      - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI/PlatformCapsuleButton.mesh
-      - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI/PlatformSphereButton.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI/RoundButton.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI/RoundButtonGlow.mesh
       - SpectaclesInteractionKit.lspkg/Assets/Meshes/PlatformUI/ScrollBarKnobMesh.mesh
@@ -183,7 +185,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKContainerExampleImage.jpg
       - SpectaclesInteractionKit.lspkg/Assets/Textures/SIKLogo.png
       - SpectaclesInteractionKit.lspkg/Assets/Textures/ScrollBarRectangle.png
-      - SpectaclesInteractionKit.lspkg/Components
       - SpectaclesInteractionKit.lspkg/Components/Helpers
       - SpectaclesInteractionKit.lspkg/Components/Helpers/ButtonFeedback.ts
       - SpectaclesInteractionKit.lspkg/Components/Helpers/CapsuleMeshCustomizer.ts
@@ -239,8 +240,6 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorLineVisual/InteractorLineVisual.ts
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorRayVisual
       - SpectaclesInteractionKit.lspkg/Components/Interaction/InteractorRayVisual/InteractorRayVisual.ts
-      - SpectaclesInteractionKit.lspkg/Components/UI
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/ContainerFrame.ts
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/FrameMaterial.mat
@@ -252,11 +251,9 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/container-button.mat
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/container-button.ss_graph
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Materials/flat.ss_graph
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/Frame.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/Frame_High.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/Frame_Mid.mesh
-      - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SphereButton.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/SysSettings_settings_button.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Meshes/pinch-depth-button.mesh
       - SpectaclesInteractionKit.lspkg/Components/UI/ContainerFrame/Prefabs
@@ -448,15 +445,25 @@ CollapsedEntities:
       - SpectaclesInteractionKit.lspkg/tsconfig.json
       - Textures
       - Textures/Base.png
+      - Textures/Device Camera Texture.deviceCameraTexture
       - Textures/Echopark.hdr
+      - Textures/Echopark.hdr/Diffuse
+      - Textures/Echopark.hdr/Specular
+      - Textures/Logo-WotF-notext.png
+      - Textures/Logo-WotF-text-n-pic.png
+      - Textures/Logo-WotF-white-text-n-pic.png
       - Textures/MaterialParams.png
       - Textures/Normal.png
+      - Textures/damaged-wizard.png
       - _Packages
+      - _Packages/RemoteServiceGateway.lspkg
       - _Packages/RemoteServiceGateway.lspkg/Helpers
       - _Packages/RemoteServiceGateway.lspkg/Helpers/AudioProcessor.ts
       - _Packages/RemoteServiceGateway.lspkg/Helpers/DynamicAudioOutput.ts
       - _Packages/RemoteServiceGateway.lspkg/Helpers/MicrophoneRecorder.ts
       - _Packages/RemoteServiceGateway.lspkg/Helpers/VideoController.ts
+      - _Packages/RemoteServiceGateway.lspkg/HostedExternal
+      - _Packages/RemoteServiceGateway.lspkg/HostedExternal/Examples
       - _Packages/RemoteServiceGateway.lspkg/HostedExternal/Examples/ExampleGeminiCalls.ts
       - _Packages/RemoteServiceGateway.lspkg/HostedExternal/Examples/ExampleGeminiLive.ts
       - _Packages/RemoteServiceGateway.lspkg/HostedExternal/Examples/ExampleImagenCalls.ts
@@ -509,24 +516,186 @@ CollapsedEntities:
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ss_graph
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/LoadingSpinner/LoadingSpinner/LoadingSpinner.ts
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials
+      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/Empty Material.mat
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/Image.mat
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/Image.png
+      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/Simple PBR.mat
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/SnapImage3D.mat
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/Unlit.mat
+      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/_jfshkdsfhks.ss_graph
+      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/empty.ss_graph
       - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/flat.ss_graph
-      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/unlit.ss_graph
+      - _Packages/RemoteServiceGateway.lspkg/Resources/Visuals/Materials/simple_pbr.ss_graph
       - _Packages/RemoteServiceGateway.lspkg/Utils
       - _Packages/RemoteServiceGateway.lspkg/Utils/Event.ts
       - _Packages/RemoteServiceGateway.lspkg/Utils/Promisfy.ts
       - _Packages/RemoteServiceGateway.lspkg/package.native
+      - _Packages/SpectaclesUIKit.lspkg
+      - _Packages/SpectaclesUIKit.lspkg/Audio
+      - _Packages/SpectaclesUIKit.lspkg/Audio/HoverAudioTrack.wav
+      - _Packages/SpectaclesUIKit.lspkg/Audio/SliderProgressionAudioTrack.wav
+      - _Packages/SpectaclesUIKit.lspkg/Audio/TriggerEndAudioTrack.wav
+      - _Packages/SpectaclesUIKit.lspkg/Audio/TriggerStartAudioTrack.wav
+      - _Packages/SpectaclesUIKit.lspkg/Materials
+      - _Packages/SpectaclesUIKit.lspkg/Materials/BaseRoundedRectangle.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/BaseRoundedRectangle.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphere.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphere.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphereDarkGlass.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphereDarkGlass.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphereTextField.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/CapsuleSphereTextField.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/ConfirmationSlider.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultButton.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultButton.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultCapsule.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultCapsuleShader.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultRadioButtonCheck.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSphere.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSphereMat.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSphereSimple.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSphereSimpleShader.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSwitch.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSwitchBackground.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSwitchKnob.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/DefaultSwitchKnob.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/FragRoundedRectangle.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/FragRoundedRectangle.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/Frame.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/Frame.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/Image.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/ImageShader.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/RoundedRectangleStroke.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/RoundedRectangleStrokeShader.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Materials/ScrollWindowFadeMask.mat
+      - _Packages/SpectaclesUIKit.lspkg/Materials/ScrollWindowFadeMaskShader.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Meshes
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/CapsuleSphere.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/DefaultButton.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/DefaultCapsule.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/DefaultSphere.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/DefaultSwitchBackground.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/DefaultSwitchKnob.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/StretchableCircle.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Meshes/Unit Plane.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/DropShadow.prefab
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/ExampleInterface.prefab
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/FrameButton.prefab
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/ImageButton.prefab
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/LabelledButton.prefab
+      - _Packages/SpectaclesUIKit.lspkg/Prefabs/LabelledToggle.prefab
+      - _Packages/SpectaclesUIKit.lspkg/README.md
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/BackPlate.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button/BaseButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button/CapsuleButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button/RoundButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Element.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/Frame.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/ButtonHandler.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/CursorHandler.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/FrameButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/FrameInputHandler.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/HoverBehavior.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/SmoothFollow.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Frame/modules/SnappingHandler.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/GridLayout
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/GridLayout/GridLayout.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/ScrollWindow/ScrollWindow.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Slider
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Slider/ConfirmationSlider.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Slider/Slider.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Switch
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Switch/Switch.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/TextInputField
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/TextInputField/TextInputField.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/TextInputField/TextInputFieldManager.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Toggle
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Toggle/BaseToggleGroup.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Toggle/SwitchToggleGroup.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Toggle/ToggleGroup.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/Toggle/Toggleable.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Components/VisualElement.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/DropShadow.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Capsule3D
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Capsule3D/Capsule3DButton.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Capsule3D/Visual
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Capsule3D/Visual/Capsule3D.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Capsule3D/Visual/Capsule3DVisual.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Sphere/Visual
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Sphere/Visual/Sphere.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Example/Sphere/Visual/SphereVisual.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/ScrollBar.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Colors.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients/GhostGradients.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients/PrimaryGradients.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients/PrimaryNeutralGradients.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients/SecondaryGradients.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Gradients/SpecialGradients.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/SnapOS2.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Styles
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Styles/CapsuleButtonParameters.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Styles/RectangleButtonParameters.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/SnapOS-2.0/Styles/RoundButtonParameters.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/Style.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Themes/Theme.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Tooltip.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/DebugCamera
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/DebugCamera/DebugCamera.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/DebugCamera/Unit Plane.mesh
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/DebugCamera/ViewingPlane.mat
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/DebugCamera/ViewingPlane.ss_graph
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/Frustum.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/InteractableStateMachine.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/ScaleResetter.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/SceneUtilities.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Utility/UIKitUtilities.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Visuals
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle/RoundedRectangle.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Visuals/RoundedRectangle/RoundedRectangleVisual.ts
+      - _Packages/SpectaclesUIKit.lspkg/Scripts/Visuals/Visual.ts
+      - _Packages/SpectaclesUIKit.lspkg/Textures
+      - _Packages/SpectaclesUIKit.lspkg/Textures/DefaultSphere_reflection_map.jpg
+      - _Packages/SpectaclesUIKit.lspkg/Textures/ReflectionCubeMap.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/circle-distance-lut.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/circle-lut-128.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/close-icon-1.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/eye-icon.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/eye-off-icon.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/follow-black.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/follow-white.png
+      - _Packages/SpectaclesUIKit.lspkg/Textures/test-image.jpg
+      - _Packages/SpectaclesUIKit.lspkg/package.native
+      - _Packages/SpectaclesUIKit.lspkg/package_dependencies.json
+      - _Scripts/3DGeneration
       - _Scripts/3DGeneration/Snap3D.ts
       - _Scripts/3DGeneration/Snap3DTypes.ts
+      - _Scripts/3DGeneration/Utils
       - _Scripts/3DGeneration/Utils/Event.ts
       - _Scripts/3DGeneration/Utils/Promisfy.ts
       - _Scripts/3DGeneration/Utils/RemoteServiceGatewayCredentials.ts
       - _Scripts/3DGeneration/Utils/Snap3D_GetStatus.remoteServiceModule
       - _Scripts/3DGeneration/Utils/Snap3D_Submit.remoteServiceModule
       - _Scripts/GestureHandler.ts
+      - _Scripts/SpellMovement.ts
       - _Scripts/Targeting.ts
       - _Scripts/Test.ts
+      - _Scripts/UIHandler.ts
+      - _Scripts/enemy_scripts
+      - _Scripts/enemy_scripts/lerp.js
+      - _Scripts/enemy_scripts/spawner.js
+      - _Scripts/web-facing/Call_AI.js
+      - _Scripts/web-facing/Refer_to_DB.js
   options: 4

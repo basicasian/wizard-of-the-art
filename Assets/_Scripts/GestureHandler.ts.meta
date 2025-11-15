@@ -28,9 +28,13 @@
   ScriptInputsHidden:
     baseMeshRoot: false
     hintText: false
+    imageRoot: false
     modelMat: false
     prompt: false
     refineMesh: false
+    refinedMeshRoot: false
+    startButton: false
+    startText: false
     useVertexColor: false
   ScriptTypesHidden:
     {}
@@ -45,7 +49,11 @@
       refineMesh: true
       useVertexColor: false
       hintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
+      startText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      imageRoot: !<reference.Image> 00000000-0000-0000-0000-000000000000
       baseMeshRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      refinedMeshRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       modelMat: !<reference.Material> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
@@ -55,5 +63,9 @@
     - // @input bool refineMesh = true
     - // @input bool useVertexColor
     - // @input Component.Text hintText
+    - // @input AssignableType startButton
+    - // @input Component.Text startText
+    - // @input Component.Image imageRoot
     - // @input SceneObject baseMeshRoot
+    - // @input SceneObject refinedMeshRoot
     - // @input Asset.Material modelMat
