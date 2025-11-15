@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/dedfa34f-e773-4434-8ecd-44227e4d7300>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2c061727-e1bd-43a2-ba54-16b607bd4a2b
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2c061727-e1bd-43a2-ba54-16b607bd4a2b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 78db6c56-aef6-4da9-956e-4312b9cf8362
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/78db6c56-aef6-4da9-956e-4312b9cf8362>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e30b5c06-abf2-4a7d-8593-b990a2745e15
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    hintText: false
+    prompt: false
+    refineMesh: false
+    useVertexColor: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - prompt: A cute dog wearing a hat
+      refineMesh: true
+      useVertexColor: false
+      hintText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input string prompt = "A cute dog wearing a hat" {"widget":"text_area"}'
+    - // @input bool refineMesh = true
+    - // @input bool useVertexColor
+    - // @input Component.Text hintText
