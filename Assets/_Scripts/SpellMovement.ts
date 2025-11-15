@@ -1,17 +1,26 @@
 @component
 export class SpellMovement extends BaseScriptComponent {
+    public forwardVec:vec3 = vec3.forward();
+    private lifespan: number = 10;
+    private movespeed: number = 50;
 
-    @input
-    speed: number = 10;
     onAwake(){
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
     }
 
     onUpdate()
     {
+        this.lifespan -= getDeltaTime();
+        if (this.lifespan <= 0)
+        {
+            this.sceneObject.destroy();
+        }
        var transform = this.sceneObject.getTransform();
+
        var pos = transform.getWorldPosition();
-       pos.z -= this.speed * getDeltaTime();
+
+       let movement = this.forwardVec.uniformScale( this.movespeed * getDeltaTime());
+       pos = pos.sub(movement);
        transform.setWorldPosition(pos);
     }
 }

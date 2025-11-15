@@ -1022,7 +1022,7 @@
   PrefabRemaps:
     []
   Name: Enemy
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1423,7 +1423,7 @@
   PrefabRemaps:
     []
   Name: BaseMeshRoot-Test
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: -13.000000, z: 0.000000}
@@ -2266,7 +2266,7 @@
     {}
   ScriptInputs:
     "":
-      speed: !<float> 25.000000
+      {}
   ScriptTypes:
     "":
       {}
@@ -4367,7 +4367,7 @@
   PrefabRemaps:
     []
   Name: Box
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: -50.000000}
@@ -8505,6 +8505,7 @@
   ScriptInputs:
     "":
       debugText: !<reference.Text> 880900f8-df4b-4250-bb00-9eadcf40199f
+      mainCamera: !<reference.Camera> 00000000-0000-0065-0000-000000000065
       gestureGPTScript: !<MappingBased.AssignableType> 895f1493-b122-4975-93d4-366a2c42fcd3
       spellModel: !<reference.SceneObject> 102673da-c023-4ea5-907b-ddf5d02833a8
   ScriptTypes:
@@ -9354,10 +9355,12 @@
     {}
   ScriptInputs:
     "":
+      mainCam: !<reference.Camera> 84ca8815-c63f-41af-a978-cdcf5eaa43f7
       startButton: !<MappingBased.AssignableType> b1b8638e-65c2-4f33-96f8-652bbd91d74c
       startText: !<reference.Text> ee8d3efe-918f-4633-9e77-24e567a20e1c
       spellModel: !<reference.SceneObject> 102673da-c023-4ea5-907b-ddf5d02833a8
       gestureGPTScript: !<MappingBased.AssignableType_1> 895f1493-b122-4975-93d4-366a2c42fcd3
+      enemy: !<reference.SceneObject> 18e3af16-e969-4fc1-8a93-0b6a461eadd0
   ScriptTypes:
     "":
       {}
@@ -9725,8 +9728,8 @@
 - !<SceneObject/d20b01db-a4ad-4b30-ab03-4986ec1a290b>
   PrefabRemaps:
     []
-  Name: Text
-  Enabled: true
+  Name: Debug
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}

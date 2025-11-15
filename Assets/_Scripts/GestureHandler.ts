@@ -88,18 +88,14 @@ export class GestureHandler extends BaseScriptComponent
     
     private SpellCombos: string[] =
         [
-            'Water',/* 'Wind', 'Fire'
-            
+            'Water', 'Wind', 'Fire'/*
             'Fire Water', 'Water Fire',
             'Fire Wind', 'Wind Fire',
             'Water Wind', 'Wind Water',*/
         ]
 
 
-
     onAwake() {
-        // TODO: CHANGE
-        // disable start while generating
         this.startButton.enabled = false;
         this.startText.text = "Please Wait.. Generating Assets";
 
@@ -114,8 +110,6 @@ export class GestureHandler extends BaseScriptComponent
             this.startButton.enabled = true;
             this.startText.text = "Start Game";
 
-
-
             })
             .catch((err) => {
             print("One or more generations failed: " + err);
@@ -124,7 +118,7 @@ export class GestureHandler extends BaseScriptComponent
             });
 
 
-        print("DONE" + getLength(this.Spells))
+        print("DONE, length: " + getLength(this.Spells))
     }
 
     private ConsumePrompt(name: string): Promise<boolean> {
@@ -191,7 +185,6 @@ export class GestureHandler extends BaseScriptComponent
     }
 
 
-
     private addBaseMeshAsset(name: string, gltfAssetData: Snap3DTypes.GltfAssetData) {
         addEntry(this.Spells, name, gltfAssetData);
         print("added entry")
@@ -236,22 +229,34 @@ export class GestureHandler extends BaseScriptComponent
         );
         sceneObject.enabled = false;
         addEntry(this.SpellModels, name, sceneObject);
-
     }
 
 
-    public getSpellObject(name: string) {
+    public getSpellObject(name: string, position: vec3) {
         let test = global.scene.createSceneObject(name)
         print(JSON.stringify(this.Spells))
         let tempObj = this.Spells[name].gltfAsset.tryInstantiate (
             test,
             this.modelMat.clone()
         );
-        tempObj.getTransform().setWorldScale(vec3.one().uniformScale(40))
+
+        let rndScale = Math.floor(Math.random() * (40 - 30 + 1) + 30);
+        tempObj.getTransform().setWorldScale(vec3.one().uniformScale(rndScale))
+        let rot1 = Math.random
+        tempObj.getTransform().setWorldRotation(this.RandomRotation())
+        tempObj.getTransform().setWorldPosition(position)
         tempObj.enabled = true
         return tempObj;
     }
 
+    private RandomRotation () : quat
+    {
+        let x = Math.random() * 360
+        let y = Math.random() * 360
+        let z = Math.random() * 360
+        return quat.fromEulerAngles(x,y,z)
+    }
+    
     private GenerateMesh() { }
     public addGesture(type: GestureType) {
         this.Gestures.push(type);

@@ -28,6 +28,7 @@
   ScriptInputsHidden:
     debugText: false
     gestureGPTScript: false
+    mainCamera: false
     spellModel: false
   ScriptTypesHidden:
     {}
@@ -39,6 +40,7 @@
     []
   DefaultScriptInputs:
     - debugText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      mainCamera: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       gestureGPTScript: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       spellModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
@@ -46,5 +48,6 @@
       {}
   InputLines:
     - // @input Component.Text debugText
+    - // @input Component.Camera mainCamera
     - // @input AssignableType gestureGPTScript
     - // @input SceneObject spellModel
