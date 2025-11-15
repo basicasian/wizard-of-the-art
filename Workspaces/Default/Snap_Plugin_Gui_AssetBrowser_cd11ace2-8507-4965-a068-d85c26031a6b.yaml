@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 691
+    size: 693
     values:
       - ""
       - FBX
@@ -19,6 +19,7 @@ CollapsedEntities:
       - FBX/goose.fbx/Meshes/Plane2
       - FBX/goose.fbx/goose
       - Image 2.mat
+      - Image 3.mat
       - Image.mat
       - Internet Module.internetModule
       - Materials
@@ -454,6 +455,7 @@ CollapsedEntities:
       - Textures/Logo-WotF-white-text-n-pic.png
       - Textures/MaterialParams.png
       - Textures/Normal.png
+      - Textures/damaged-wizard.png
       - _Packages
       - _Packages/RemoteServiceGateway.lspkg
       - _Packages/RemoteServiceGateway.lspkg/Helpers

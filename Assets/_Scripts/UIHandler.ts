@@ -19,9 +19,7 @@ export class UIHandler extends BaseScriptComponent {
     @input
     gestureGPTScript: GestureHandler;
 
-    //@input
-    //spellScript: SpellMovement;
-    
+
     onAwake() {  
 
 
@@ -29,7 +27,8 @@ export class UIHandler extends BaseScriptComponent {
         this.startButton.onTriggerUp.add(() => {
             print('Start fully triggered!');
             let spell = this.gestureGPTScript.getSpellObject("Water");
-            
+            //let obj = global.scene.createSceneObject("Name")
+            //obj.getTransform
             spell.createComponent(SpellMovement.getTypeName());
         });
   

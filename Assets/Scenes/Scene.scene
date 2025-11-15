@@ -6,9 +6,9 @@
     - !<own> 5aa0f98b-e799-448c-a2dc-cae5d04fa2a4
     - !<own> aceba1ac-ea58-49ec-a758-86e64e562f6f
     - !<own> a0e88b02-44df-4b36-a025-cb8ab82ff051
+    - !<own> ee1755b1-6e7f-4c28-8350-9ca85346ec80
     - !<own> 2e378007-86a0-4b98-8edf-3289c761eaf3
     - !<own> 9506a403-1de9-4832-9afd-84fcb21520cf
-    - !<own> ee1755b1-6e7f-4c28-8350-9ca85346ec80
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
@@ -931,6 +931,25 @@
   ScriptTypes:
     "":
       {}
+- !<Image/18362226-6733-4830-9b37-7fffdda44436>
+  PrefabRemaps:
+    []
+  Name: Image
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Fit
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4832d680-c882-44a2-b00c-172f7751b5e9
+  FlipX: false
+  FlipY: false
+  RotationAngle: 0
+  Pivot: {x: 0.000000, y: 0.000000}
+  ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
 - !<SceneObject/184d05de-ec3a-4c85-bf8e-046021cec3ff>
   PrefabRemaps:
     []
@@ -999,6 +1018,21 @@
     - !<own> 2b48df55-44c4-4516-b674-91f4c5d5481b
   Components:
     []
+- !<SceneObject/18e3af16-e969-4fc1-8a93-0b6a461eadd0>
+  PrefabRemaps:
+    []
+  Name: Enemy
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 32.000000, y: 32.000000, z: 32.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 18362226-6733-4830-9b37-7fffdda44436
 - !<ScriptComponent/1a8172f2-2188-4952-b6f2-b3c28bf5fc83>
   PrefabRemaps:
     []
@@ -7190,6 +7224,7 @@
     - !<own> 27466e5f-d4b9-4c74-a267-0fb00d9e2aeb
     - !<own> 102673da-c023-4ea5-907b-ddf5d02833a8
     - !<own> 6464f74f-96c7-4318-ae6b-cabeaf0104a7
+    - !<own> b325b1e8-4bff-44b4-bb4c-0c316b24ba47
   Components:
     []
 - !<Text/a0ecffa6-e2f9-4612-85b9-56cf7d5a7d6c>
@@ -8205,6 +8240,21 @@
     - !<own> 88b656b3-7e38-4f5d-b871-6cc2043de439
   Components:
     - !<own> 21b6db4d-7b26-4e61-9be7-d9646dad40c8
+- !<SceneObject/b325b1e8-4bff-44b4-bb4c-0c316b24ba47>
+  PrefabRemaps:
+    []
+  Name: Enemy
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: -100.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 18e3af16-e969-4fc1-8a93-0b6a461eadd0
+  Components:
+    []
 - !<SceneObject/b376ea46-bee6-4eac-82cc-1f09a4389f34>
   PrefabRemaps:
     []

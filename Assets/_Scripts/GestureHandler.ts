@@ -88,8 +88,8 @@ export class GestureHandler extends BaseScriptComponent
     
     private SpellCombos: string[] =
         [
-            'Water', 'Wind', 'Fire'
-            /*
+            'Water',/* 'Wind', 'Fire'
+            
             'Fire Water', 'Water Fire',
             'Fire Wind', 'Wind Fire',
             'Water Wind', 'Wind Water',*/
@@ -119,8 +119,8 @@ export class GestureHandler extends BaseScriptComponent
             })
             .catch((err) => {
             print("One or more generations failed: " + err);
-            this.startButton.enabled = true;
-            this.startText.text = "Start Game";
+            this.startButton.enabled = false;
+            this.startText.text = "Generation Failed. Please Restart App.";
             });
 
 
@@ -241,8 +241,14 @@ export class GestureHandler extends BaseScriptComponent
 
 
     public getSpellObject(name: string) {
-        let tempObj = this.SpellModels[name];
-        tempObj.enabled = true;
+        let test = global.scene.createSceneObject(name)
+        print(JSON.stringify(this.Spells))
+        let tempObj = this.Spells[name].gltfAsset.tryInstantiate (
+            test,
+            this.modelMat.clone()
+        );
+        tempObj.getTransform().setWorldScale(vec3.one().uniformScale(40))
+        tempObj.enabled = true
         return tempObj;
     }
 
