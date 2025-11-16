@@ -255,10 +255,15 @@ export class GestureHandler extends BaseScriptComponent
         tempObj.getTransform().setWorldPosition(position)
         tempObj.enabled = true
 
+    
         let collider = tempObj.createComponent('Physics.ColliderComponent')
-        collider.shape = Shape.createSphereShape()
-        collider.fitVisual = true
+        const shape = Shape.createSphereShape()
+        shape.radius = 0.5
+        collider.shape = shape
+        collider.debugDrawEnabled = true
         
+        tempObj.name = name + "Spell"
+        print("tempObj.name" + tempObj.name)
 
         return tempObj;
     }

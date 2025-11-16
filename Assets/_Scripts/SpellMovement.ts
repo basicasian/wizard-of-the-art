@@ -8,6 +8,7 @@ export class SpellMovement extends BaseScriptComponent {
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
     }
 
+
     onUpdate()
     {
 
@@ -16,6 +17,7 @@ export class SpellMovement extends BaseScriptComponent {
         if (this.lifespan <= 0)
         {
             this.sceneObject.destroy();
+            return
         }
         if (this.getTransform() == null)
             return;

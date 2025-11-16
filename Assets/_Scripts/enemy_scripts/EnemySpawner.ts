@@ -7,12 +7,12 @@ import { PlayerHealth } from "_Scripts/Player/PlayerHealth";
 export class EnemySpawner extends BaseScriptComponent {
 
     timer : number= 0.0;
-    spawnInterval : number = 5.0;
+    spawnInterval : number = 3.0;
     @input
     spawnParent : SceneObject;  
     @input
     enemyPrefab : ObjectPrefab;
-    currentEnemy : SceneObject;
+    public currentEnemy : SceneObject;
  
     @input 
     manAudio:AudioComponent
@@ -60,20 +60,24 @@ export class EnemySpawner extends BaseScriptComponent {
         let rotation = quat.rotationFromTo(vec3.left(), dir)
         this.currentEnemy.getTransform().setWorldRotation(rotation)
         this.currentEnemy.getTransform().setWorldScale(vec3.one().uniformScale(10))
-        this.currentEnemy.createComponent(Lerp.getTypeName())
-        this.currentEnemy.getComponent(Lerp.getTypeName()).Init()
+        const lerp = this.currentEnemy.createComponent(Lerp.getTypeName())
+        
+        lerp.Init()
         
         // add collisions
         let body = this.currentEnemy.createComponent('Physics.BodyComponent')
         body.shape = Shape.createBoxShape();
         body.mass = 0
-        this.currentEnemy.getComponent('Physics.ColliderComponent').onCollisionEnter.add(function (e)
+        this.currentEnemy.getComponent('Physics.ColliderComponent').onCollisionEnter.add((e) =>
         {
             var collision = e.collision;
             print("OTHER COLLIDER NAME: " + collision.collider.sceneObject.name)
+            print(this.currentEnemy.name)
+
             if (collision.collider.sceneObject.name.includes("Player"))
             {
                 // collide with player
+                print("COLLISION: player and pepe")
                 collision.collider.sceneObject.getComponent(PlayerHealth.getTypeName()).takeDamage()
                 // make noise
                 //this.manAudio.play(1);
@@ -83,8 +87,12 @@ export class EnemySpawner extends BaseScriptComponent {
             {
                 // collide with spells
                 // doesnt work 
-                print("Hit pepe by spell!!")
-                this.sceneObject.destroy();              
+                print("COLLISION: player and pepe")
+
+                print(this.currentEnemy.name)
+                //this.currentEnemy.enabled = false
+                //this.currentEnemy.sceneObject.destroy();  
+                this.currentEnemy.enabled = false            
             }
         })
         /*
