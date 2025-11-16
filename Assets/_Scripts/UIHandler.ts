@@ -1,6 +1,7 @@
 
 import { RectangleButton } from '../_Packages/SpectaclesUIKit.lspkg/Scripts/Components/Button/RectangleButton';
 import { GestureHandler } from "./GestureHandler";
+import { SpellMovement } from "./SpellMovement";
 import WorldCameraFinderProvider from "SpectaclesInteractionKit.lspkg/Providers/CameraProvider/WorldCameraFinderProvider";
 import { EnemySpawner } from "./enemy_scripts/EnemySpawner";
 import { PlayerHealth } from "./Player/PlayerHealth";
@@ -39,17 +40,15 @@ export class UIHandler extends BaseScriptComponent {
         this.startButton.onTriggerUp.add(() => {
             print('Start fully triggered!');
 
-            //let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
-            //spell.createComponent(SpellMovement.getTypeName());
-            //spell.getComponent(SpellMovement.getTypeName()).forwardVec =  this.mCamera.forward();
-
-            
+            let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
+            spell.createComponent(SpellMovement.getTypeName());
+            spell.getComponent(SpellMovement.getTypeName()).forwardVec =  this.mCamera.forward();
+     
             this.playerHealth.revive()
             this.enemySpawner.startSpawning();
 
-            
-            this.infoText.text = "Good Luck!"
-            this.startButton.enabled = false
+            this.infoText.text = "Watch out for the Evil Wizards"
+            this.startButton.sceneObject.getParent().getParent().enabled = false
             this.startText.enabled = false
         });
 

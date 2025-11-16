@@ -25,16 +25,17 @@ export class PlayerHealth extends BaseScriptComponent {
     
     death()
     {
+        print("You Lost!")
         this.enemySpawner.enabled = false
         this.infoText.text = "YOU LOST! :("
 
-        this.startButton.enabled = true;
+        this.startButton.sceneObject.getParent().getParent().enabled = true;
         this.startText.enabled = true
    
-        if (!this.DatabaseComms) {
+        /*if (!this.DatabaseComms) {
             this.DatabaseComms = this.sceneObject.createComponent(DatabaseComms.getTypeName());
         }
-        this.DatabaseComms.set_values(150, 10, getAbsoluteStartTime(), "LOSE" )
+        this.DatabaseComms.set_values(150, 10, getAbsoluteStartTime(), "LOSE" )*/
     }
 
     revive() 

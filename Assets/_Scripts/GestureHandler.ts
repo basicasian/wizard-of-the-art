@@ -91,7 +91,7 @@ export class GestureHandler extends BaseScriptComponent
 
     private SpellCombos: string[] =
         [
-            'Water', 'Fire'/* 'Wind', 
+            'Water', /*'Fire'/* 'Wind', 
             'Fire Water', 'Water Fire',
             'Fire Wind', 'Wind Fire',
             'Water Wind', 'Wind Water',*/
@@ -113,17 +113,17 @@ export class GestureHandler extends BaseScriptComponent
             print("All assets generated: " + results.length);
 
 
+            this.startButton.sceneObject.getParent().getParent().enabled = true;
             this.startButton.enabled = true;
             this.startText.text = "Start Game";
             this.isDone = true
-
 
             //this.enemySpawner.startSpawning();
 
             })
             .catch((err) => {
             print("One or more generations failed: " + err);
-            this.startButton.enabled = false;
+            this.startButton.sceneObject.getParent().getParent().enabled = false;
             this.startText.text = "Generation Failed. Please Restart App.";
             });
 
@@ -259,7 +259,7 @@ export class GestureHandler extends BaseScriptComponent
 
         let collider = tempObj.createComponent('Physics.ColliderComponent')
         collider.shape = Shape.createSphereShape()
-        collider.fitVisual = false
+        collider.fitVisual = true
 
         body.mass = 0
 

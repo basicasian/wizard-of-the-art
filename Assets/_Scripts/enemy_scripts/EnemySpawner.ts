@@ -7,7 +7,7 @@ import { PlayerHealth } from "_Scripts/Player/PlayerHealth";
 export class EnemySpawner extends BaseScriptComponent {
 
     timer : number= 0.0;
-    spawnInterval : number = 3.0;
+    spawnInterval : number = 5.0;
     @input
     spawnParent : SceneObject;  
     @input
@@ -69,20 +69,21 @@ export class EnemySpawner extends BaseScriptComponent {
         body.onCollisionEnter.add(function (e)
         {
             var collision = e.collision;
-            print(this.mCamera)
             print("OTHER COLLIDER NAME: " + collision.collider.sceneObject.name)
             if (collision.collider.sceneObject.name.includes("Player"))
             {
                 // collide with player
                 collision.collider.sceneObject.getComponent(PlayerHealth.getTypeName()).takeDamage()
                 // make noise
-                this.manAudio.play(1);
+                //this.manAudio.play(1);
 
             }
             else if (e.collision.collider.sceneObject.name.includes("Spell"))
             {
                 // collide with spells
-                this.destroy()                
+                // doesnt work 
+                print("Hit pepe by spell!!1!11oneone")
+                this.sceneObject.destroy();              
             }
         })
         /*
@@ -100,7 +101,12 @@ export class EnemySpawner extends BaseScriptComponent {
         var z = radius * Math.sin(angle);
         var y = 0// Assuming ground level spawn
         print("enemy position is " + new vec3(x, y, z) )
-        return new vec3(x, y, z).add(this.mCamera.getTransform().getWorldPosition());
+        let desiredPosition = new vec3(x, y, z).add(this.mCamera.getTransform().getWorldPosition());
+        if (!this.mCamera.inFoV(desiredPosition)) 
+            {
+                return this.getRandomSpawnPosition(radius);
+            }
+        return  desiredPosition;
     }
 
 }
