@@ -17,7 +17,7 @@ export class Lerp extends BaseScriptComponent {
 
 public Init() {
     this.transform = this.getTransform();
-
+    this.mCamera = WorldCameraFinderProvider.getInstance();
     if (this.speedLevel <= 0) {
         print("MOVE SCRIPT ERROR: 'Movement Speed' must be greater than 0.");
         return;
@@ -53,6 +53,8 @@ onUpdate() {
         this.sceneObject.destroy()
     
     let targetPos = this.mCamera.getWorldPosition();
+    if(this.getTransform()== null)
+        return;
     let direction = targetPos.sub(this.getTransform().getWorldPosition()).normalize()
     if(direction.lengthSquared <= 0.1)
         return;

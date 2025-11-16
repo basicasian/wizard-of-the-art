@@ -47,9 +47,10 @@ export class EnemySpawner extends BaseScriptComponent {
     private spawnNewInstance() 
     {   
         this.currentEnemy = this.enemyPrefab.instantiate(this.spawnParent);
+        //this.currentEnemy.name = 'Pepe' + Math.random();
         this.currentEnemy.enabled = true
         
-        var pos = this.getRandomSpawnPosition(150)
+        var pos = this.getRandomSpawnPosition(300)
 
         this.currentEnemy.getTransform().setWorldPosition(pos)
         // get rotation to make the enemy face the player
@@ -58,7 +59,7 @@ export class EnemySpawner extends BaseScriptComponent {
         // angle
         let rotation = quat.rotationFromTo(vec3.left(), dir)
         this.currentEnemy.getTransform().setWorldRotation(rotation)
-        this.currentEnemy.getTransform().setWorldScale(vec3.one().uniformScale(2))
+        this.currentEnemy.getTransform().setWorldScale(vec3.one().uniformScale(10))
         this.currentEnemy.createComponent(Lerp.getTypeName())
         this.currentEnemy.getComponent(Lerp.getTypeName()).Init()
         
@@ -66,7 +67,7 @@ export class EnemySpawner extends BaseScriptComponent {
         let body = this.currentEnemy.createComponent('Physics.BodyComponent')
         body.shape = Shape.createBoxShape();
         body.mass = 0
-        body.onCollisionEnter.add(function (e)
+        this.currentEnemy.getComponent('Physics.ColliderComponent').onCollisionEnter.add(function (e)
         {
             var collision = e.collision;
             print("OTHER COLLIDER NAME: " + collision.collider.sceneObject.name)
@@ -82,7 +83,7 @@ export class EnemySpawner extends BaseScriptComponent {
             {
                 // collide with spells
                 // doesnt work 
-                print("Hit pepe by spell!!1!11oneone")
+                print("Hit pepe by spell!!")
                 this.sceneObject.destroy();              
             }
         })
@@ -100,7 +101,6 @@ export class EnemySpawner extends BaseScriptComponent {
         var x = radius * Math.cos(angle);
         var z = radius * Math.sin(angle);
         var y = 0// Assuming ground level spawn
-        print("enemy position is " + new vec3(x, y, z) )
         let desiredPosition = new vec3(x, y, z).add(this.mCamera.getTransform().getWorldPosition());
         if (!this.mCamera.inFoV(desiredPosition)) 
             {

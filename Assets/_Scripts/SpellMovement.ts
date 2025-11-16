@@ -10,12 +10,16 @@ export class SpellMovement extends BaseScriptComponent {
 
     onUpdate()
     {
+
+        
         this.lifespan -= getDeltaTime();
         if (this.lifespan <= 0)
         {
             this.sceneObject.destroy();
         }
-       var transform = this.sceneObject.getTransform();
+        if (this.getTransform() == null)
+            return;
+       var transform = this.getTransform();
 
        var pos = transform.getWorldPosition();
 

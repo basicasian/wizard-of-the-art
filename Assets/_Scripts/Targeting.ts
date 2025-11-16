@@ -34,7 +34,7 @@ export class Targeting extends BaseScriptComponent {
 
         if (this.gestureGPTScript.IsDone() ) {
 
-          let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
+          let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(50)));
           spell.createComponent(SpellMovement.getTypeName());
           spell.getComponent(SpellMovement.getTypeName()).forwardVec = this.mCamera.forward();
           this.waterAudio.play(1);
@@ -48,7 +48,7 @@ export class Targeting extends BaseScriptComponent {
         print('Right Hand Grab Begin');
 
         if (this.gestureGPTScript.IsDone()) {
-          let spell = this.gestureGPTScript.getSpellObject("Water", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(110)));
+          let spell = this.gestureGPTScript.getSpellObject("Fire", this.mCamera.getWorldPosition().sub(this.mCamera.forward().uniformScale(50)));
           spell.createComponent(SpellMovement.getTypeName());
           spell.getComponent(SpellMovement.getTypeName()).forwardVec = this.mCamera.forward();
            this.fireAudio.play(1);

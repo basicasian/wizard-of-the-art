@@ -91,7 +91,7 @@ export class GestureHandler extends BaseScriptComponent
 
     private SpellCombos: string[] =
         [
-            'Water', /*'Fire'/* 'Wind', 
+            'Water', 'Fire', /*'Wind', 
             'Fire Water', 'Water Fire',
             'Fire Wind', 'Wind Fire',
             'Water Wind', 'Wind Water',*/
@@ -254,14 +254,11 @@ export class GestureHandler extends BaseScriptComponent
         tempObj.getTransform().setWorldRotation(this.RandomRotation())
         tempObj.getTransform().setWorldPosition(position)
         tempObj.enabled = true
-        let body = tempObj.createComponent('Physics.BodyComponent')
-        body.shape = Shape.createBoxShape()
 
         let collider = tempObj.createComponent('Physics.ColliderComponent')
         collider.shape = Shape.createSphereShape()
         collider.fitVisual = true
-
-        body.mass = 0
+        
 
         return tempObj;
     }
