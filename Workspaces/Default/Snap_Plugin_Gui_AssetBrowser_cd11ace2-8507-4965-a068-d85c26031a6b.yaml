@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 718
+    size: 719
     values:
       - Easy Lens
       - Easy Lens/Lens Components
@@ -39,7 +39,6 @@ CollapsedEntities:
       - Models/goose.fbx/Meshes/Plane2
       - Models/goose.fbx/goose
       - PBR.mat
-      - Prefabs
       - Prefabs/Box.prefab
       - Prefabs/EnemyBox.prefab
       - Prefabs/Pepe.prefab
@@ -51,6 +50,7 @@ CollapsedEntities:
       - Shaders/pbr.ss_graph
       - Sounds/BGM.mp3
       - Sounds/fireball-whoosh-5-179129.mp3
+      - Sounds/male_hurt7-48124.mp3
       - Sounds/water-splash-199583.mp3
       - SpectaclesInteractionKit.lspkg/Assets/Audio
       - SpectaclesInteractionKit.lspkg/Assets/Audio/HoverAudioTrack.wav
@@ -720,5 +720,6 @@ CollapsedEntities:
       - _Scripts/enemy_scripts/EnemySpawner.ts
       - _Scripts/enemy_scripts/Lerp.ts
       - _Scripts/web-facing/Call_AI.js
+      - _Scripts/web-facing/DatabaseComms.ts
       - _Scripts/web-facing/Refer_to_DB.js
   options: 4

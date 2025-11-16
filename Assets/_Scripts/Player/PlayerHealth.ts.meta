@@ -29,7 +29,9 @@
     deathImage: false
     enemySpawner: false
     infoText: false
+    startButton: false
     startImage: false
+    startText: false
   ScriptTypesHidden:
     {}
   ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
@@ -43,6 +45,8 @@
       infoText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       startImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       deathImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      startButton: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      startText: !<reference.Text> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -51,3 +55,5 @@
     - // @input Component.Text infoText
     - // @input Component.Image startImage
     - // @input Component.Image deathImage
+    - // @input AssignableType_1 startButton
+    - // @input Component.Text startText

@@ -2,7 +2,7 @@
 export class SpellMovement extends BaseScriptComponent {
     public forwardVec:vec3 = vec3.forward();
     private lifespan: number = 10;
-    private movespeed: number = 50;
+    private movespeed: number = 300;
 
     onAwake(){
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));

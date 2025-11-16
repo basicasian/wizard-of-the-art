@@ -27,6 +27,7 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     enemyPrefab: false
+    manAudio: false
     spawnParent: false
   ScriptTypesHidden:
     {}
@@ -39,9 +40,11 @@
   DefaultScriptInputs:
     - spawnParent: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       enemyPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      manAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
   InputLines:
     - // @input SceneObject spawnParent
     - // @input Asset.ObjectPrefab enemyPrefab
+    - // @input Component.AudioComponent manAudio

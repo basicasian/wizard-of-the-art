@@ -32,10 +32,13 @@
     Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> 9c336b23-9491-4842-a3c8-9ee87f4ecff6
+    []
   Components:
     - !<own> 00000000-0000-0065-0000-000000000065
     - !<own> e5553c8a-0b7e-4ef4-92d9-3e1318fb82c1
+    - !<own> d2f52bae-a593-4509-9f08-c822d6c179c2
+    - !<own> 4bc460de-02cb-4468-bc8a-b3eb4044a378
+    - !<own> 7a45c708-d421-4d9a-823d-cc69386c48f1
 - !<Camera/00000000-0000-0065-0000-000000000065>
   PrefabRemaps:
     []
@@ -804,25 +807,6 @@
     - !<own> b6967747-d54d-4fdf-b8cc-652d7e6080ba
   Components:
     []
-- !<ScriptComponent/308ab1ef-8b50-4e7b-94c5-e14e10e3e19c>
-  PrefabRemaps:
-    []
-  Name: PlayerHealth
-  Enabled: true
-  ScriptAsset: !<reference> 6b4dc3b8-cd6f-4636-85e9-2253d7fc7334
-  ScriptInputsDefault:
-    {}
-  ScriptTypesDefault:
-    {}
-  ScriptInputs:
-    "":
-      enemySpawner: !<MappingBased.AssignableType> b31038b2-cb39-40d6-8147-f6d6a63de8ce
-      infoText: !<reference.Text> 61965c05-9f8e-4dd4-8f7c-b5c4380fba12
-      startImage: !<reference.Image> b8124c81-18fd-4378-a61e-e0072d683d6d
-      deathImage: !<reference.Image> 268e29ee-014c-40ad-9fb7-217121787776
-  ScriptTypes:
-    "":
-      {}
 - !<SceneObject/319c29db-cd9c-448c-8028-20ef49b55a70>
   PrefabRemaps:
     []
@@ -878,6 +862,21 @@
   ScriptTypes:
     "":
       {}
+- !<SceneObject/33fcedce-c095-475c-9a88-9456ac9d229b>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 6853933a-129b-4be9-9ce6-8ead50008bfe
 - !<SceneObject/38525cab-c9f5-4965-814b-8eb0d8b9ad55>
   PrefabRemaps:
     []
@@ -1218,6 +1217,27 @@
     []
   Components:
     []
+- !<ScriptComponent/4bc460de-02cb-4468-bc8a-b3eb4044a378>
+  PrefabRemaps:
+    []
+  Name: PlayerHealth
+  Enabled: true
+  ScriptAsset: !<reference> 6b4dc3b8-cd6f-4636-85e9-2253d7fc7334
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      enemySpawner: !<MappingBased.AssignableType> b31038b2-cb39-40d6-8147-f6d6a63de8ce
+      infoText: !<reference.Text> 61965c05-9f8e-4dd4-8f7c-b5c4380fba12
+      startImage: !<reference.Image> b8124c81-18fd-4378-a61e-e0072d683d6d
+      deathImage: !<reference.Image> 268e29ee-014c-40ad-9fb7-217121787776
+      startButton: !<MappingBased.AssignableType_1> b1b8638e-65c2-4f33-96f8-652bbd91d74c
+      startText: !<reference.Text> ee8d3efe-918f-4633-9e77-24e567a20e1c
+  ScriptTypes:
+    "":
+      {}
 - !<RenderMeshVisual/4d3c2e52-807c-4c3e-96ce-305f2b364250>
   PrefabRemaps:
     []
@@ -1270,6 +1290,7 @@
     - !<own> 724f2057-2383-4de3-8d62-fe038faa897f
     - !<own> beda5b5d-a749-496c-a019-7e110c62d811
     - !<own> 8c27e3ea-24b0-4c5a-a132-167ec3420c06
+    - !<own> e726a90a-f926-4533-b12b-56ff3c47081b
   Components:
     - !<own> 40a4b9a0-08fe-4f14-9d57-a8051c912709
 - !<SceneObject/5073a1e9-5105-46dd-8050-79de03e5fb39>
@@ -1811,6 +1832,87 @@
     - !<own> ec5cf781-7365-4db2-83df-e3d10556ffd3
   Components:
     []
+- !<Text/6853933a-129b-4be9-9ce6-8ead50008bfe>
+  PrefabRemaps:
+    []
+  Name: Text
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Text: Restart
+  Editable: false
+  ShowEditingPreview: true
+  TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
+  SizeToFit: false
+  FontSize: 48
+  Font: !<reference> 00000000-0000-0000-0000-000000000000
+  LayoutRect:
+    left: -7.500000
+    bottom: -2.250000
+    right: 7.500000
+    top: 2.250000
+  OverflowVertical: Overflow
+  OverflowHorizontal: Overflow
+  Fill: !<TextFill>
+    Mode: Solid
+    Color: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    Texture: !<reference> 00000000-0000-0000-0000-000000000000
+    ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+    TileCount: 5.000000
+    TileZone: Rect
+    TextureStretch: FitWidth
+  BlendMode: PremultipliedAlpha
+  Outline: !<OutlineSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Size: 0.250000
+  Dropshadow: !<DropshadowSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    OffsetX: 0.250000
+    OffsetY: 0.250000
+  Background: !<BackgroundSettings>
+    Enabled: false
+    Fill: !<TextFill>
+      Mode: Solid
+      Color: {x: 0.000000, y: 0.000000, z: 0.000000, w: 1.000000}
+      Texture: !<reference> 00000000-0000-0000-0000-000000000000
+      ColorTint: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      TileCount: 5.000000
+      TileZone: Rect
+      TextureStretch: FitWidth
+    Margins:
+      left: 0.000000
+      bottom: 0.000000
+      right: 0.000000
+      top: 0.000000
+    CornerRadius: 0.000000
+  AdvancedLayout: !<TextAdvancedLayout>
+    ExtentsTarget: !<reference> 00000000-0000-0000-0000-000000000000
+    LetterSpacing: 0.000000
+    LineSpacing: 1.000000
+    CapitalizationOverride: None
+  DepthTest: false
+  TwoSided: false
 - !<SceneObject/6907898a-c588-458b-8b7e-1debe457e199>
   PrefabRemaps:
     []
@@ -1877,6 +1979,47 @@
   BlendNormals: false
   BlendShapes:
     {}
+- !<ScriptComponent/6cb32884-cbd7-42e3-b537-2925250fc23b>
+  PrefabRemaps:
+    []
+  Name: RectangleButton
+  Enabled: true
+  ScriptAsset: !<reference> 173d7099-914c-4f24-ac1c-1b67a66ae138
+  ScriptInputsDefault:
+    _renderOrder: true
+    _inactive: true
+    _playAudio: true
+    _style: true
+    _toggleable: true
+    _defaultToOn: true
+    addCallbacks: true
+    triggerUpCallbacks: true
+    triggerDownCallbacks: true
+    onValueChangeCallbacks: true
+    onFinishedCallbacks: true
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      _renderOrder: 0
+      _size: !<Vec3> {x: 15.000000, y: 3.000000, z: 3.000000}
+      _inactive: false
+      _playAudio: false
+      _style: PrimaryNeutral
+      _toggleable: false
+      _defaultToOn: false
+      addCallbacks: false
+      triggerUpCallbacks:
+        []
+      triggerDownCallbacks:
+        []
+      onValueChangeCallbacks:
+        []
+      onFinishedCallbacks:
+        []
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/6dc5dd7a-4726-4cb6-b42f-a12f4b6416c3>
   PrefabRemaps:
     []
@@ -2121,6 +2264,22 @@
   MaxDistance: 100.000000
   EnableDirectivityEffect: false
   EnablePositionEffect: false
+- !<ScriptComponent/7a45c708-d421-4d9a-823d-cc69386c48f1>
+  PrefabRemaps:
+    []
+  Name: DatabaseComms
+  Enabled: true
+  ScriptAsset: !<reference> 38535249-ebe1-4ba9-9136-ca1a7d846392
+  ScriptInputsDefault:
+    {}
+  ScriptTypesDefault:
+    {}
+  ScriptInputs:
+    "":
+      internetModule: !<reference.InternetModule> ec59473c-e4bb-4ba1-8b79-28b602fd99bb
+  ScriptTypes:
+    "":
+      {}
 - !<SceneObject/7b9d067f-414a-4620-a6b1-b0824953478c>
   PrefabRemaps:
     []
@@ -2515,7 +2674,7 @@
   PrefabRemaps:
     []
   Name: DeathImage
-  Enabled: true
+  Enabled: false
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 5.000000, z: 2.000000}
@@ -2541,6 +2700,23 @@
     []
   Components:
     []
+- !<AudioComponent/8fbc6cd0-9205-4a15-94d7-6d1383fe1d5e>
+  PrefabRemaps:
+    []
+  Name: Audio
+  Enabled: true
+  AudioTrack: !<reference> 90c1085c-6e6e-4a19-842a-9f75d5f5e22c
+  EnableAutoplayLoop: false
+  Volume: 1.000000
+  EnableMixToSnap: false
+  RecordVolume: 1.000000
+  EnableSpatialAudio: false
+  EnableDistanceEffect: false
+  CurveType: Logarithm
+  MinDistance: 0.000000
+  MaxDistance: 100.000000
+  EnableDirectivityEffect: false
+  EnablePositionEffect: false
 - !<SceneObject/91191875-22ce-4150-892c-d780508fa8e5>
   PrefabRemaps:
     []
@@ -2571,6 +2747,7 @@
     []
   Components:
     - !<own> b31038b2-cb39-40d6-8147-f6d6a63de8ce
+    - !<own> 8fbc6cd0-9205-4a15-94d7-6d1383fe1d5e
 - !<SceneObject/929164ef-2d41-474a-a457-1bf03d6cd9f1>
   PrefabRemaps:
     []
@@ -2646,21 +2823,6 @@
     - !<own> 541a1667-fb17-43bf-bd3b-7b713063d3f7
   Components:
     []
-- !<SceneObject/9c336b23-9491-4842-a3c8-9ee87f4ecff6>
-  PrefabRemaps:
-    []
-  Name: PlayerHealth
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 308ab1ef-8b50-4e7b-94c5-e14e10e3e19c
 - !<SceneObject/9c6bdaf8-6f75-4c15-8f87-51a47efb49e9>
   PrefabRemaps:
     []
@@ -3084,6 +3246,7 @@
     "":
       spawnParent: !<reference.SceneObject> 921cb43c-8db1-4796-9135-0604850efb7e
       enemyPrefab: !<reference.ObjectPrefab> b2015598-ec81-41c1-af90-7d0d50075427
+      manAudio: !<reference.AudioComponent> 8fbc6cd0-9205-4a15-94d7-6d1383fe1d5e
   ScriptTypes:
     "":
       {}
@@ -3611,8 +3774,11 @@
       mainCam: !<reference.Camera> 84ca8815-c63f-41af-a978-cdcf5eaa43f7
       startButton: !<MappingBased.AssignableType> b1b8638e-65c2-4f33-96f8-652bbd91d74c
       startText: !<reference.Text> ee8d3efe-918f-4633-9e77-24e567a20e1c
+      infoText: !<reference.Text> 61965c05-9f8e-4dd4-8f7c-b5c4380fba12
       spellModel: !<reference.SceneObject> 102673da-c023-4ea5-907b-ddf5d02833a8
       gestureGPTScript: !<MappingBased.AssignableType_1> 895f1493-b122-4975-93d4-366a2c42fcd3
+      enemySpawner: !<MappingBased.AssignableType_2> b31038b2-cb39-40d6-8147-f6d6a63de8ce
+      playerHealth: !<MappingBased.AssignableType_3> 4bc460de-02cb-4468-bc8a-b3eb4044a378
   ScriptTypes:
     "":
       {}
@@ -3692,6 +3858,25 @@
     []
   Components:
     - !<own> 78224225-349e-4dcf-9df2-c4fa1b347500
+- !<ColliderComponent/d2f52bae-a593-4509-9f08-c822d6c179c2>
+  PrefabRemaps:
+    []
+  Name: Physics Collider
+  Enabled: true
+  Shape: !<Capsule>
+    Axis: Y
+    Length: 50.000000
+    Radius: 6.000000
+  Matter: !<reference> 00000000-0000-0000-0000-000000000000
+  Filter: !<reference> 00000000-0000-0000-0000-000000000000
+  OverlapFilter: !<reference> 00000000-0000-0000-0000-000000000000
+  WorldSettings: !<reference> 00000000-0000-0000-0000-000000000000
+  EnableSmoothing: false
+  PositionTension: 30.000000
+  RotationTension: 30.000000
+  ForceCompound: false
+  Intangible: false
+  ShowCollider: false
 - !<SceneObject/d3340ef4-90e8-49c1-aeb6-4194ed9937f9>
   PrefabRemaps:
     []
@@ -3937,6 +4122,21 @@
     []
   Components:
     - !<own> 28cf3766-599c-4bd5-8505-2a92bf6606ed
+- !<SceneObject/e726a90a-f926-4533-b12b-56ff3c47081b>
+  PrefabRemaps:
+    []
+  Name: RestartButton
+  Enabled: false
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: -19.000000, z: 5.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 33fcedce-c095-475c-9a88-9456ac9d229b
+  Components:
+    - !<own> 6cb32884-cbd7-42e3-b537-2925250fc23b
 - !<SceneObject/e7d04753-28a1-4f9d-bc21-9c8284652226>
   PrefabRemaps:
     []

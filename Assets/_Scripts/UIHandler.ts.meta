@@ -26,8 +26,11 @@
   ExportUid: 00000000-0000-0000-0000-000000000000
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
+    enemySpawner: false
     gestureGPTScript: false
+    infoText: false
     mainCam: false
+    playerHealth: false
     spellModel: false
     startButton: false
     startText: false
@@ -43,8 +46,11 @@
     - mainCam: !<reference.Camera> 00000000-0000-0000-0000-000000000000
       startButton: !<MappingBased.AssignableType> 00000000-0000-0000-0000-000000000000
       startText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      infoText: !<reference.Text> 00000000-0000-0000-0000-000000000000
       spellModel: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       gestureGPTScript: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      enemySpawner: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      playerHealth: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -52,5 +58,8 @@
     - // @input Component.Camera mainCam
     - // @input AssignableType startButton
     - // @input Component.Text startText
+    - // @input Component.Text infoText
     - // @input SceneObject spellModel
     - // @input AssignableType_1 gestureGPTScript
+    - // @input AssignableType_2 enemySpawner
+    - // @input AssignableType_3 playerHealth

@@ -1,5 +1,7 @@
 //@input Asset.InternetModule internetModule
 /** @type {InternetModule} */
+"use strict";
+class DatabaseComms{
 var internetModule = script.internetModule;
 
 // --- Supabase Configuration ---
@@ -26,7 +28,20 @@ const TEST_GAME_DATA = {
     outcome: "LOSE"
 };
 
+function set_values(projSpeed, spawnFreq, secs, result)
+{
+  game_data = 
+  {
+  projectile_speed  = projSpeed,
+  spawn_frequency = spawnFreq,
+  enemy_hp = 1,
+  enemy_spells_cast = 0,
+  game_duration_seconds = secs,
+  outcome = result
+}
 
+  write_user_data(TEST_USER_ID, game_data)
+}
 /**
  * Reads the last <amount> of game sessions for a specific user.
  */
@@ -146,3 +161,6 @@ async function runTest() {
 
 // Bind the test function to the OnStartEvent.
 script.createEvent('OnStartEvent').bind(runTest);
+}
+
+exports.default = DatabaseComms;

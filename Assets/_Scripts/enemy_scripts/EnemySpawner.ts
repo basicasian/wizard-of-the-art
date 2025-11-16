@@ -13,6 +13,9 @@ export class EnemySpawner extends BaseScriptComponent {
     @input
     enemyPrefab : ObjectPrefab;
     currentEnemy : SceneObject;
+ 
+    @input 
+    manAudio:AudioComponent
 
     private mCamera = WorldCameraFinderProvider.getInstance();
     onAwake() {
@@ -20,7 +23,6 @@ export class EnemySpawner extends BaseScriptComponent {
         this.spawnParent = this.getSceneObject();
         
     }
-
 
     startSpawning() {
         this.createEvent("UpdateEvent").bind(this.onUpdate.bind(this));
@@ -68,13 +70,18 @@ export class EnemySpawner extends BaseScriptComponent {
         {
             var collision = e.collision;
             print(this.mCamera)
+            print("OTHER COLLIDER NAME: " + collision.collider.sceneObject.name)
             if (collision.collider.sceneObject.name.includes("Player"))
             {
                 // collide with player
                 collision.collider.sceneObject.getComponent(PlayerHealth.getTypeName()).takeDamage()
+                // make noise
+                this.manAudio.play(1);
+
             }
             else if (e.collision.collider.sceneObject.name.includes("Spell"))
             {
+                // collide with spells
                 this.destroy()                
             }
         })

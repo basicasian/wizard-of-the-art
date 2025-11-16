@@ -117,7 +117,8 @@ export class GestureHandler extends BaseScriptComponent
             this.startText.text = "Start Game";
             this.isDone = true
 
-            this.enemySpawner.startSpawning();
+
+            //this.enemySpawner.startSpawning();
 
             })
             .catch((err) => {
@@ -250,12 +251,16 @@ export class GestureHandler extends BaseScriptComponent
 
         let rndScale = Math.floor(Math.random() * (40 - 30 + 1) + 30);
         tempObj.getTransform().setWorldScale(vec3.one().uniformScale(rndScale))
-        let rot1 = Math.random
         tempObj.getTransform().setWorldRotation(this.RandomRotation())
         tempObj.getTransform().setWorldPosition(position)
         tempObj.enabled = true
         let body = tempObj.createComponent('Physics.BodyComponent')
         body.shape = Shape.createBoxShape()
+
+        let collider = tempObj.createComponent('Physics.ColliderComponent')
+        collider.shape = Shape.createSphereShape()
+        collider.fitVisual = false
+
         body.mass = 0
 
         return tempObj;
