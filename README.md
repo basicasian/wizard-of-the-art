@@ -90,7 +90,7 @@ Hand gestures then summon and launch these spells into the AR world.
 
 ## Technical Highlights  
 
-### 🧙 AI-Generated Spell Models  
+### AI-Generated Spell Models  
 Powered by **Snap3D**, spell assets are generated dynamically when the game begins.  
 Examples:  
 - Fire spell model  
@@ -98,10 +98,10 @@ Examples:
 
 Each spell model is instantiated, scaled, and positioned in real time.
 
-### 🎯 Gesture-Driven Casting  
+### Gesture-Driven Casting  
 The game listens to pinch and grab events to spawn spell projectiles in the player’s forward direction.
 
-### 💥 Spell Physics  
+### Spell Physics  
 Each spell moves forward with a lifespan timer and collider for interactions.
 
 ---
