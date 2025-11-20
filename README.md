@@ -4,7 +4,7 @@
 You play as a wizard devoted to **AI-generated magic** and **augmented reality**, tasked with fighting against human-made memes—such as Pepes—by casting dynamically generated spells using hand gestures.
 
 <p align="middle">
-  <img src="wizard-of-art.png" alt="Gameplay Mockup" width="60%"/> 
+  <img src="wizard-of-arts.png" alt="Gameplay Mockup" width="60%"/> 
 </p>
 
 **Creators:** The Bulbarians: Renate Zhang, Armand Balint, Lucie Nguyen, Orestis Liaskos, Luis Queijo
