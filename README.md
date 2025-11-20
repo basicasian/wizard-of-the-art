@@ -1,7 +1,7 @@
 # Wizard of ARt  
 
 **Wizard of ARt** is an immersive AR spell-casting game created during **Hackathon Junction 2025** in under 48 hours.  
-You play as a wizard devoted to **AI-generated magic** and **augmented reality**, tasked with fighting against human-made memes—such as Pepes—by casting dynamically generated spells using hand gestures.
+You play as a wizard devoted to **AI-generated magic** and **augmented reality**, tasked with fighting against human-made memes, such as Pepes, by casting dynamically generated spells using hand gestures.
 
 <p align="middle">
   <img src="wizard-of-arts.png" alt="Gameplay Mockup" width="60%"/> 
