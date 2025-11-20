@@ -7,7 +7,7 @@ You play as a wizard devoted to **AI-generated magic** and **augmented reality**
   <img src="wizard-of-arts.png" alt="Gameplay Mockup" width="60%"/> 
 </p>
 
-**Creators:** The Bulbarians: Renate Zhang, Armand Balint, Lucie Nguyen, Orestis Liaskos, Luis Queijo
+**Creators:** The Bulbarians: Renate Zhang, Armand Balint, Lucie Nguyen, Orestis Liaskos, Luis Queijo <br>
 **Event:** Junction 2025 Hackathon (48-hour prototype)
 
 ---
